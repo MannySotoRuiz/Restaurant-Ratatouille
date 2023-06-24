@@ -57,15 +57,17 @@ const Hero = () => {
         <div className="w-full flex items-center justify-between px-[270px] text-white text-[14px] py-[50px]">
           <div>Logo</div>
           <div className="flex items-center space-x-8">
-            <h2 className="border-b-2 border-orange-500 pb-1">HOME</h2>
+            <h2 className="border-b-2 border-orange-500 pb-1 cursor-pointer">
+              HOME
+            </h2>
             <div>
-              <h2 className="pb-2">MENU</h2>
+              <h2 className="pb-2 cursor-pointer">MENU</h2>
             </div>
-            <h2 className="pb-2">ABOUT</h2>
-            <h2 className="pb-2">GALLERY</h2>
-            <h2 className="pb-2">EVENTS</h2>
-            <h2 className="pb-2">BLOG</h2>
-            <h2 className="pb-2">CONTACT</h2>
+            <h2 className="pb-2 cursor-pointer">ABOUT</h2>
+            <h2 className="pb-2 cursor-pointer">GALLERY</h2>
+            <h2 className="pb-2 cursor-pointer">EVENTS</h2>
+            <h2 className="pb-2 cursor-pointer">BLOG</h2>
+            <h2 className="pb-2 cursor-pointer">CONTACT</h2>
             <button className="border-2 border-white px-[20px] py-[10px] cursor-pointer mb-2">
               MAKE A RESERVATION
             </button>
@@ -76,7 +78,7 @@ const Hero = () => {
         {/* welcome message */}
         <div className="absolute top-[45%] w-full flex flex-col gap-6 items-center justify-center text-white hero-welcome">
           <h2 className="font-medium text-xl">WELCOME TO FRANCE</h2>
-          <h1 className="text-7xl font-semibold">RATATOUILLE</h1>
+          <h1 className="text-7xl font-semibold title">RATATOUILLE</h1>
         </div>
       </div>
     </div>
