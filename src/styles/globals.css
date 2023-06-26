@@ -88,3 +88,13 @@ body {
 .recommendation-menu:hover img {
     transform: scale(1.1);
 }
+
+.bookTableSection {
+    background-image: url(https://source.unsplash.com/JBDYs80RTcs);
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 100px;
+}
