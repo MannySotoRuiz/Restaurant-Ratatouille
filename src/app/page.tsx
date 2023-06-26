@@ -104,10 +104,7 @@ export default function Home() {
 
                             {/* menu items */}
                             {saladMenu.map((item, idx) => (
-                                <div
-                                    className="w-full mb-6"
-                                    key={idx}
-                                >
+                                <div className="w-full mb-6" key={idx}>
                                     {/* menu item title and price*/}
                                     <div className="flex items-center w-full mb-1">
                                         <h6 className="title text-[24px]">
@@ -139,10 +136,7 @@ export default function Home() {
 
                             {/* menu items */}
                             {meatMenu.map((item, idx) => (
-                                <div
-                                    className="w-full mb-6"
-                                    key={idx}
-                                >
+                                <div className="w-full mb-6" key={idx}>
                                     {/* menu item title and price*/}
                                     <div className="flex items-center w-full mb-1">
                                         <h6 className="title text-[24px]">
@@ -170,10 +164,7 @@ export default function Home() {
 
                             {/* menu items */}
                             {sandwichesMenu.map((item, idx) => (
-                                <div
-                                    className="w-full mb-6"
-                                    key={idx}
-                                >
+                                <div className="w-full mb-6" key={idx}>
                                     {/* menu item title and price*/}
                                     <div className="flex items-center w-full mb-1">
                                         <h6 className="title text-[24px]">
@@ -295,14 +286,61 @@ export default function Home() {
             {/* our philosophy */}
             <section className="w-full flex items-center justify-center flex-col m-auto py-20">
                 <div className="tablet:w-11/12 laptop:w-[1000px] desktop:w-[1200px] laptop:px-10 grid grid-cols-2">
-                    <div className="w-full h-full border border-red-500"></div>
-                    <div className="w-full h-full border border-red-500 px-4">
+                    {/* left side */}
+                    <div className="w-full h-full relative">
+                        <div className="w-1/2 h-[70%] absolute bottom-0 left-0">
+                            <Image
+                                src="https://source.unsplash.com/W7yjuNoAe74"
+                                alt="chef"
+                                fill={true}
+                                className="rounded-xl object-cover shadow-lg shadow-black/50"
+                            />
+                        </div>
+                        <div className="w-8/12 h-[90%] absolute top-0 right-0 z-20">
+                            <Image
+                                src="https://source.unsplash.com/eBmyH7oO5wY"
+                                alt="chef"
+                                fill={true}
+                                className="rounded-xl object-cover shadow-lg shadow-black/50"
+                            />
+                        </div>
+                    </div>
+                    {/* right side */}
+                    <div className="w-full h-full pl-16 flex flex-col justify-center space-y-5">
                         {/* subtitle */}
                         <h6 className="text-[18px] font-medium text-orange-600">
                             COMMUNITY & BALANCE
                         </h6>
                         {/* title */}
+                        <h2 className="title text-[50px] leading-[50px] font-light">
+                            OUR FOOD PHILOSOPHY
+                        </h2>
                         {/* description */}
+                        <p className="text-lg">
+                            At Chateau Yaffa, we believe in creating a culinary
+                            experience that nourishes both the body and the
+                            soul. Our philosophy is centered around the
+                            following principles:
+                        </p>
+                        <ol className="list-decimal pl-8 text-lg space-y-6">
+                            <li>
+                                Community – Food has the power to bring people
+                                together, and we believe in using our platform
+                                to foster a sense of community. Whether it’s
+                                through hosting events or simply creating a
+                                welcoming atmosphere in our restaurant, we are
+                                dedicated to creating a space where people can
+                                come together and enjoy a meal in good company.
+                            </li>
+                            <li>
+                                Health and Wellness – We believe that food can
+                                have a profound impact on our health and
+                                well-being. Our menu features a variety of
+                                nutritious options that are designed to nourish
+                                the body and promote overall health and
+                                wellness.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </section>
