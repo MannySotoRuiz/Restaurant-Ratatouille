@@ -317,9 +317,9 @@ export default function Home() {
                         </h2>
                         {/* description */}
                         <p className="text-lg">
-                            At Chateau Yaffa, we believe in creating a culinary
-                            experience that nourishes both the body and the
-                            soul. Our philosophy is centered around the
+                            At France Ratatouille, we believe in creating a
+                            culinary experience that nourishes both the body and
+                            the soul. Our philosophy is centered around the
                             following principles:
                         </p>
                         <ol className="list-decimal pl-8 text-lg space-y-6">
