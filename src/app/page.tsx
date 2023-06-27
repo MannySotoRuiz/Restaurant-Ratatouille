@@ -8,6 +8,7 @@ import {
     recommendationMenu2,
     recommendationMenu3,
 } from "@/utils/data";
+import BookATable from "@/components/BookATable";
 
 export default function Home() {
     return (
@@ -104,7 +105,10 @@ export default function Home() {
 
                             {/* menu items */}
                             {saladMenu.map((item, idx) => (
-                                <div className="w-full mb-6" key={idx}>
+                                <div
+                                    className="w-full mb-6"
+                                    key={idx}
+                                >
                                     {/* menu item title and price*/}
                                     <div className="flex items-center w-full mb-1">
                                         <h6 className="title text-[24px]">
@@ -136,7 +140,10 @@ export default function Home() {
 
                             {/* menu items */}
                             {meatMenu.map((item, idx) => (
-                                <div className="w-full mb-6" key={idx}>
+                                <div
+                                    className="w-full mb-6"
+                                    key={idx}
+                                >
                                     {/* menu item title and price*/}
                                     <div className="flex items-center w-full mb-1">
                                         <h6 className="title text-[24px]">
@@ -164,7 +171,10 @@ export default function Home() {
 
                             {/* menu items */}
                             {sandwichesMenu.map((item, idx) => (
-                                <div className="w-full mb-6" key={idx}>
+                                <div
+                                    className="w-full mb-6"
+                                    key={idx}
+                                >
                                     {/* menu item title and price*/}
                                     <div className="flex items-center w-full mb-1">
                                         <h6 className="title text-[24px]">
@@ -344,6 +354,7 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+            <BookATable />
         </main>
     );
 }
