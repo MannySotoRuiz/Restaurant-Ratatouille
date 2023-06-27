@@ -78,7 +78,7 @@ const BookATable = () => {
                                 control={form.control}
                                 name="date"
                                 render={({ field }) => (
-                                    <div className="bg-white w-full flex rounded-tl-lg rounded-bl-lg">
+                                    <div className="bg-white w-full flex rounded-tl-lg rounded-bl-lg border-r">
                                         <FormItem className="flex flex-col w-full py-2 px-4">
                                             <FormLabel className="text-gray-700">
                                                 Date
