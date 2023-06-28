@@ -37,28 +37,30 @@ const Hero = () => {
             ))}
 
             {/* hero content */}
-            <div className="w-screen h-screen absolute z-50 bg-[rgba(0,0,0,0.45)]">
+            <div className="w-screen h-screen absolute z-50 bg-[rgba(0,0,0,0.45)] flex flex-col items-center">
                 {/* restuarant info */}
-                <div className="flex border-b border-gray-500 items-center justify-between px-[270px] text-white text-[13px] py-[15px]">
-                    {/* address */}
-                    <div className="flex items-center space-x-2">
-                        <FaLocationDot />
-                        <h3>1234 Avenue, New York, NY 01234</h3>
-                    </div>
-                    {/* phone number and email */}
-                    <div className="space-x-6 flex items-center">
-                        <h3>(123) 456 7890</h3>
-                        <div className="flex items-center space-x-1">
-                            <HiOutlineMail />
-                            <h3>france.ratatouille@gmail.com</h3>
+                <div className="hidden lg:flex w-full border-b border-gray-500 items-center justify-center text-white text-[13px] py-[15px]">
+                    <div className="w-full 2xl:w-[1400px] flex items-center justify-between px-[4%] sm:px-[6%] 2xl:px-[40px]">
+                        {/* address */}
+                        <div className="flex items-center space-x-2">
+                            <FaLocationDot />
+                            <h3>1234 Avenue, New York, NY 01234</h3>
+                        </div>
+                        {/* phone number and email */}
+                        <div className="space-x-6 flex items-center">
+                            <h3>(123) 456 7890</h3>
+                            <div className="flex items-center space-x-1">
+                                <HiOutlineMail />
+                                <h3>france.ratatouille@gmail.com</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 {/* nav bar */}
-                <div className="w-full flex items-center justify-between px-[270px] text-white text-[14px] py-[50px]">
+                <div className="w-full 2xl:w-[1400px] flex items-center justify-between px-[10%] lg:px-[6%] 2xl:px-[40px] text-white text-[14px] py-[50px]">
                     <div>Logo</div>
-                    <div className="flex items-center space-x-8">
+                    <div className="hidden lg:flex items-center space-x-8">
                         <h2 className="border-b-2 border-orange-500 pb-1 cursor-pointer">
                             HOME
                         </h2>
@@ -79,8 +81,10 @@ const Hero = () => {
 
                 {/* welcome message */}
                 <div className="absolute top-[45%] w-full flex flex-col gap-6 items-center justify-center text-white hero-welcome">
-                    <h2 className="font-medium text-xl">WELCOME TO FRANCE</h2>
-                    <h1 className="text-7xl font-semibold title">
+                    <h2 className="font-medium text-[14px] md:text-xl">
+                        WELCOME TO FRANCE
+                    </h2>
+                    <h1 className="text-[42px] md:text-[60px] lg:text-7xl font-semibold title">
                         RATATOUILLE
                     </h1>
                 </div>

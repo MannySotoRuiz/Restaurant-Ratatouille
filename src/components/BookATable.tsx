@@ -24,7 +24,6 @@ import {
     PopoverContent,
     PopoverTrigger,
 } from "@/components/ui/popover";
-import { Separator } from "@/components/ui/separator";
 import {
     Select,
     SelectContent,
@@ -57,28 +56,28 @@ const BookATable = () => {
     }
     return (
         <div className="bookTableSection w-full">
-            <div className="w-full h-full bg-[rgba(0,0,0,0.7)] py-[100px] flex items-center justify-center">
-                <div className="w-[1000px] flex flex-col items-center justify-center">
+            <div className="w-full h-full bg-[rgba(0,0,0,0.7)] py-[70px] lg:py-[100px] px-[6%] sm:px-[8%] xl:px-0 flex items-center justify-center">
+                <div className="w-full xl:w-[1000px] flex flex-col items-center justify-center">
                     <div className="flex space-x-3">
-                        <span className="w-20 text-center border-b border-orange-600 leading-[0.1em] mt-[15px] mb-[15px] mx-[10px]"></span>
-                        <h6 className="text-[18px] font- text-orange-600">
+                        <span className="w-10 xl:w-20 text-center border-b border-orange-600 leading-[0.1em] mt-[15px] mb-[15px] mx-[10px]"></span>
+                        <h6 className="text-[16px] xl:text-[18px] font- text-orange-600">
                             ONLINE RESERVATION
                         </h6>
-                        <span className="w-20 text-center border-b border-orange-600 leading-[0.1em] mt-[15px] mb-[15px] mx-[10px]"></span>
+                        <span className="w-10 xl:w-20 text-center border-b border-orange-600 leading-[0.1em] mt-[15px] mb-[15px] mx-[10px]"></span>
                     </div>
-                    <h1 className="title text-[66px] font-light text-white mb-5">
+                    <h1 className="title text-[38px] md:text-[42px] lg:text-[48px] xl:text-[66px] font-light text-white mb-5">
                         BOOK A TABLE
                     </h1>
                     <Form {...form}>
                         <form
                             onSubmit={form.handleSubmit(onSubmit)}
-                            className="w-full min-h-[80px] grid grid-cols-4"
+                            className="w-full min-h-[80px] grid grid-cols-1 sm:grid-cols-4 gap-y-4 sm:gap-y-0"
                         >
                             <FormField
                                 control={form.control}
                                 name="date"
                                 render={({ field }) => (
-                                    <div className="bg-white w-full flex rounded-tl-lg rounded-bl-lg border-r">
+                                    <div className="bg-white w-full flex rounded-lg sm:rounded-none sm:rounded-tl-lg sm:rounded-bl-lg sm:border-r">
                                         <FormItem className="flex flex-col w-full py-2 px-4">
                                             <FormLabel className="text-gray-700">
                                                 Date
@@ -138,7 +137,7 @@ const BookATable = () => {
                                 name="time"
                                 render={({ field }) => (
                                     <>
-                                        <FormItem className="flex flex-col w-full bg-white py-2 px-4 border-r">
+                                        <FormItem className="flex flex-col w-full bg-white py-2 px-4 rounded-lg sm:rounded-none sm:border-r">
                                             <FormLabel className="text-gray-700">
                                                 Time
                                             </FormLabel>
@@ -226,7 +225,7 @@ const BookATable = () => {
                                 name="partySize"
                                 render={({ field }) => (
                                     <>
-                                        <FormItem className="flex flex-col w-full bg-white py-2 px-4">
+                                        <FormItem className="flex flex-col w-full bg-white py-2 px-4 rounded-lg sm:rounded-none">
                                             <FormLabel className="text-gray-700">
                                                 Party size
                                             </FormLabel>
@@ -274,7 +273,7 @@ const BookATable = () => {
                             />
                             <button
                                 type="submit"
-                                className="w-full h-full bg-orange-600 text-white text-[18px] font-normal rounded-tr-lg rounded-br-lg"
+                                className="w-full h-full bg-orange-600 text-white text-[18px] font-normal py-7 sm:py-0 rounded-lg sm:rounded-none sm:rounded-tr-lg sm:rounded-br-lg"
                             >
                                 Reserve now
                             </button>

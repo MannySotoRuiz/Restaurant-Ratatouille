@@ -14,11 +14,11 @@ export default function Home() {
     return (
         <main>
             <Hero />
-            <div className="w-full flex items-center justify-center flex-col m-auto pb-20">
+            <div className="w-screen flex items-center justify-center flex-col m-auto pb-20">
                 {/* main body section */}
-                <div className="tablet:w-11/12 laptop:w-[1000px] desktop:w-[1200px] laptop:px-10 flex flex-col justify-center items-center space-y-2">
+                <div className="w-full xl:w-[1200px] px-[6%] sm:px-[8%] xl:px-0 flex flex-col justify-center items-center space-y-2">
                     {/* announcement */}
-                    <div className="w-full py-[50px] border-b-2 border-gray-200 flex flex-col justify-center items-center mb-5">
+                    <div className="w-full py-[50px] border-b-2 border-gray-200 flex flex-col justify-center items-center mb-5 text-center">
                         <p>
                             There is a 3.0% cash adjustment discount built into
                             all pricing.
@@ -33,57 +33,52 @@ export default function Home() {
 
                     {/* about us */}
                     <div className="w-full">
-                        <h4 className="text-sm text-red-400 font-bold">
+                        <h4 className="text-[13px] xl:text-sm text-red-400 font-bold">
                             WELCOME TO
                         </h4>
-                        <h2 className="text-5xl font-medium title">
+                        <h2 className="text-[38px] xl:text-5xl font-medium title mt-1">
                             France Ratatouille
                         </h2>
                     </div>
-                    <div className="w-full flex mb-20">
-                        {/* left side */}
-                        <div className="w-7/12 h-full flex flex-col gap-2 pt-4 pr-[80px]">
-                            <p className="text-[17px]">
-                                France Ratatouille is a stunning new restaurant
-                                that offers diners a unique and unforgettable
-                                dining experience. Located in a 1234 Avenue, New
-                                York, NY 01234, the restaurant boasts elegant
-                                and sophisticated décor, with high ceilings,
-                                ornate details, and a warm and inviting
-                                atmosphere.{" "}
-                            </p>
-                            <p className="text-[17px]">
-                                The menu features a range of delicious,
-                                seasonally inspired dishes, created using only
-                                the freshest and finest ingredients.{" "}
-                            </p>
+                    <div className="w-full h-full xl:h-80vh grid grid-cols-1 md:grid-cols-[1.5fr,1fr] pt-4">
+                        <div className="flex flex-col items-center justify-between w-full h-full md:pr-14 lg:pr-[90px] xl:pr-28">
+                            <div className="mb-0 md:mb-10 xl:mb-0">
+                                <p className="text-[18px] text-[#363636] mb-4">
+                                    France Ratatouille is a stunning new
+                                    restaurant that offers diners a unique and
+                                    unforgettable dining experience. Located in
+                                    a 1234 Avenue, New York, NY 01234, the
+                                    restaurant boasts elegant and sophisticated
+                                    dÃ©cor, with high ceilings, ornate details,
+                                    and a warm and inviting atmosphere.{" "}
+                                </p>
+                                <p className="text-[18px] text-[#363636]">
+                                    The menu features a range of delicious,
+                                    seasonally inspired dishes, created using
+                                    only the freshest and finest ingredients.{" "}
+                                </p>
 
-                            <button className=" mt-6 mb-16 px-[20px] py-[10px] w-32 inline-block bg-orange-600 text-white text-sm hover:-translate-y-[2px] transition-all">
-                                OUR MENU
-                            </button>
+                                <button className="mt-10 md:mt-5 lg:mt-8 mb-12 sm:mb-10 xl:mb-16 px-[20px] py-[10px] w-32 inline-block bg-orange-600 text-white text-sm hover:-translate-y-[2px] transition-all">
+                                    OUR MENU
+                                </button>
+                            </div>
 
-                            <div className="w-full h-[400px] relative">
+                            <div className="w-full md:w-full h-[220px] lg:h-[350px] xl:h-[400px] relative">
                                 <Image
-                                    // src={"https://source.unsplash.com/t7jTtJ9iyUE"}
-                                    src={
-                                        "https://source.unsplash.com/FQWtCUiE4GM"
-                                    }
+                                    src="https://source.unsplash.com/FQWtCUiE4GM"
                                     alt="food"
                                     fill={true}
-                                    className="rounded-xl shadow-2xl shadow-black"
+                                    className="rounded-xl object-cover shadow-lg shadow-black/50"
                                 />
                             </div>
                         </div>
-                        {/* right side */}
-                        <div className="w-5/12 h-full pt-[14px]">
-                            <div className="w-full h-[707px] relative">
+                        <div className="hidden md:flex w-full h-full flex-col-reverse">
+                            <div className="w-full md:h-[420px] lg:h-[80%] xl:h-full relative">
                                 <Image
-                                    src={
-                                        "https://source.unsplash.com/t7jTtJ9iyUE"
-                                    }
+                                    src="https://source.unsplash.com/t7jTtJ9iyUE"
                                     alt="food"
                                     fill={true}
-                                    className="rounded-xl shadow-2xl shadow-black"
+                                    className="rounded-xl shadow-lg shadow-black/50"
                                 />
                             </div>
                         </div>
@@ -91,7 +86,7 @@ export default function Home() {
                     {/* end of about us section */}
 
                     {/* featured menus section */}
-                    <div className="pt-28 pb-[30px] w-full grid grid-cols-3 gap-8">
+                    <div className="pt-20 md:pt-28 pb-[30px] w-full grid grid-cols-1 xl:grid-cols-3 gap-8">
                         {/* salads menu */}
                         <div className="w-full flex flex-col items-center">
                             {/* menu subtitle */}
@@ -207,8 +202,8 @@ export default function Home() {
             </div>
 
             {/* recommendations */}
-            <section className="w-full flex">
-                <div className="w-2/5 h-[833px] relative recommendation-menu">
+            <section className="w-full flex flex-col sm:flex-row">
+                <div className="w-full sm:w-2/5 h-40vh sm:h-60vh lg:h-70vh xl:h-[833px] relative recommendation-menu">
                     <Image
                         src={recommendationMenu1.image}
                         alt={recommendationMenu1.title}
@@ -227,7 +222,7 @@ export default function Home() {
                             </span>
                         </a>
                         {/* title */}
-                        <h2 className="title text-[50px] font-light">
+                        <h2 className="title text-[30px] lg:text-[40px] xl:text-[50px] font-light">
                             {recommendationMenu1.title}
                         </h2>
                         {/* description */}
@@ -236,7 +231,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-                <div className="w-2/5 h-[833px] relative recommendation-menu">
+                <div className="w-full sm:w-2/5 h-40vh sm:h-60vh lg:h-70vh xl:h-[833px] relative recommendation-menu">
                     <Image
                         src={recommendationMenu2.image}
                         alt={recommendationMenu2.title}
@@ -255,7 +250,7 @@ export default function Home() {
                             </span>
                         </a>
                         {/* title */}
-                        <h2 className="title text-[50px] font-light">
+                        <h2 className="title text-[30px] lg:text-[40px] xl:text-[50px] font-light">
                             {recommendationMenu2.title}
                         </h2>
                         {/* description */}
@@ -264,7 +259,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-                <div className="w-1/5 h-[833px] relative recommendation-menu">
+                <div className="w-full sm:w-1/5 h-40vh sm:h-60vh lg:h-70vh xl:h-[833px] relative recommendation-menu">
                     <Image
                         src={recommendationMenu3.image}
                         alt={recommendationMenu3.title}
@@ -283,7 +278,7 @@ export default function Home() {
                             </span>
                         </a>
                         {/* title */}
-                        <h2 className="title text-[40px] font-light">
+                        <h2 className="title text-[30px] lg:text-[40px] xl:text-[50px] font-light text-right">
                             {recommendationMenu3.title}
                         </h2>
                         {/* description */}
@@ -294,11 +289,11 @@ export default function Home() {
                 </div>
             </section>
             {/* our philosophy */}
-            <section className="w-full flex items-center justify-center flex-col m-auto py-20">
-                <div className="tablet:w-11/12 laptop:w-[1000px] desktop:w-[1200px] laptop:px-10 grid grid-cols-2">
+            <section className="w-full flex items-center justify-center flex-col py-16 sm:py-20 px-[6%] sm:px-[8%] xl:px-0">
+                <div className="w-full xl:border-none xl:w-[1200px] xl:px-10 grid grid-cols-1 xl:grid-cols-2 space-y-7 xl:space-y-0">
                     {/* left side */}
-                    <div className="w-full h-full relative">
-                        <div className="w-1/2 h-[70%] absolute bottom-0 left-0">
+                    <div className="w-full h-50vh xl:h-full relative">
+                        <div className="w-[70%] h-[60%] sm:w-1/2 sm:h-[80%] absolute bottom-0 left-0">
                             <Image
                                 src="https://source.unsplash.com/W7yjuNoAe74"
                                 alt="chef"
@@ -306,7 +301,7 @@ export default function Home() {
                                 className="rounded-xl object-cover shadow-lg shadow-black/50"
                             />
                         </div>
-                        <div className="w-8/12 h-[90%] absolute top-0 right-0 z-20">
+                        <div className="w-[70%] h-[60%] sm:w-8/12 sm:h-[90%] absolute top-0 right-0 z-20">
                             <Image
                                 src="https://source.unsplash.com/eBmyH7oO5wY"
                                 alt="chef"
@@ -316,13 +311,13 @@ export default function Home() {
                         </div>
                     </div>
                     {/* right side */}
-                    <div className="w-full h-full pl-16 flex flex-col justify-center space-y-5">
+                    <div className="w-full h-full xl:pl-16 flex flex-col justify-center space-y-5">
                         {/* subtitle */}
-                        <h6 className="text-[18px] font-medium text-orange-600">
+                        <h6 className="text-[16px] xl:text-[18px] font-medium text-orange-600">
                             COMMUNITY & BALANCE
                         </h6>
                         {/* title */}
-                        <h2 className="title text-[50px] leading-[50px] font-light">
+                        <h2 className="title text-[32px] xl:text-[50px] leading-[50px] font-light">
                             OUR FOOD PHILOSOPHY
                         </h2>
                         {/* description */}

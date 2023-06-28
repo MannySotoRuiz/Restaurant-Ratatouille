@@ -165,10 +165,36 @@ body {
 }
 
 .bookTableSection {
-    background-image: url(https://source.unsplash.com/JBDYs80RTcs);
+    /* background-image: url(https://source.unsplash.com/JBDYs80RTcs); */
+    background-image: url(https://patiotime.loftocean.com/demo-data/wp-content/uploads/sites/6/2022/04/alaksiej-carankievic-JBDYs80RTcs-unsplash.jpg);
     position: relative;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
+
+@media screen and (max-width: 767px) {
+    .hero-welcome h2:before,
+    .hero-welcome h2:after {
+        content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+    }
+}
+@media screen and (max-width: 639px) {
+    .hero-welcome h2:before,
+    .hero-welcome h2:after {
+        content: "\00a0\00a0\00a0\00a0\00a0\00a0";
+    }
+}
+
+/* For 2K & 4K resolutions */
+/* @media screen and (min-width: 2048px) {
+    body {
+        zoom: 1.5;
+    }
+}
+@media screen and (min-width: 3840px) {
+    body {
+        zoom: 2;
+    }
+} */

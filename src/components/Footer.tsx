@@ -6,17 +6,17 @@ import { HiOutlineMail } from "react-icons/hi";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#09080E] text-white flex flex-col items-center justify-center">
-            <div className="w-[1400px] grid grid-cols-3 py-20 border-b border-gray-500">
+        <footer className="bg-[#09080E] text-white flex flex-col items-center justify-center px-[6%] sm:px-[8%] xl:px-0">
+            <div className="w-full xl:w-[1400px] grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 py-20 gap-y-20 sm:gap-y-10 xl:gap-y-0 border-b border-gray-500">
                 {/* company */}
-                <div className="w-full h-full flex flex-col space-y-5 pr-20">
+                <div className="w-full h-full flex flex-col space-y-5 sm:pr-20">
                     <Image
                         src="https://www.yaffanyc.com/wp-content/uploads/2023/02/Chateau-Yaffa-Logo-SVG-WHITE-1.svg"
                         alt="logo"
                         width={300}
                         height={214}
                     />
-                    <p className="text-[15px] font-light text-white/90">
+                    <p className="text-[15px] font-light xl:text-white/90">
                         France Ratatouille is a beautiful and sophisticated
                         restaurant that offers a unique dining experience
                         centered around a warm and welcoming community
@@ -53,7 +53,7 @@ const Footer = () => {
                     </div>
                 </div>
                 {/* contact info & address */}
-                <div className="w-full h-full space-y-6 px-20">
+                <div className="w-full h-full space-y-6 xl:px-20">
                     <h4 className="text-[16px] font-medium">OUR ADDRESS</h4>
                     <div className="flex items-center text-[15px] space-x-3">
                         <FaLocationDot />
@@ -69,7 +69,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex items-center w-[1400px] py-10">
+            <div className="flex items-center w-full xl:w-[1400px] py-10">
                 <p className="text-[#B0B0B0] text-[16px]">
                     Website designed by{" "}
                     <Link
