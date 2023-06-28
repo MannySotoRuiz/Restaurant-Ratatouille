@@ -1,5 +1,7 @@
 "use client";
 
+import { Mail } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { HiOutlineMail } from "react-icons/hi";
@@ -49,8 +51,9 @@ const Hero = () => {
                         {/* phone number and email */}
                         <div className="space-x-6 flex items-center">
                             <h3>(123) 456 7890</h3>
-                            <div className="flex items-center space-x-1">
-                                <HiOutlineMail />
+                            <div className="flex items-center space-x-2">
+                                {/* <HiOutlineMail className="text-[15px]" /> */}
+                                <Mail size={15} />
                                 <h3>france.ratatouille@gmail.com</h3>
                             </div>
                         </div>
@@ -65,13 +68,43 @@ const Hero = () => {
                             HOME
                         </h2>
                         <div>
-                            <h2 className="pb-2 cursor-pointer">MENU</h2>
+                            <Link
+                                href="brunch-menu"
+                                className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
+                            >
+                                MENU
+                            </Link>
                         </div>
-                        <h2 className="pb-2 cursor-pointer">ABOUT</h2>
-                        <h2 className="pb-2 cursor-pointer">GALLERY</h2>
-                        <h2 className="pb-2 cursor-pointer">EVENTS</h2>
-                        <h2 className="pb-2 cursor-pointer">BLOG</h2>
-                        <h2 className="pb-2 cursor-pointer">CONTACT</h2>
+                        <Link
+                            href="brunch-menu"
+                            className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
+                        >
+                            ABOUT
+                        </Link>
+                        <Link
+                            href="brunch-menu"
+                            className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
+                        >
+                            GALLERY
+                        </Link>
+                        <Link
+                            href="brunch-menu"
+                            className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
+                        >
+                            EVENTS
+                        </Link>
+                        <Link
+                            href="brunch-menu"
+                            className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
+                        >
+                            BLOG
+                        </Link>
+                        <Link
+                            href="brunch-menu"
+                            className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
+                        >
+                            CONTACT
+                        </Link>
                         <button className="border-2 border-white px-[20px] py-[10px] cursor-pointer mb-2 hover:bg-white hover:text-black transition">
                             MAKE A RESERVATION
                         </button>

@@ -101,6 +101,14 @@ body {
   background-position: center center;
   background-size: cover;
 } */
+.brunchMenu-page {
+    position: relative;
+    overflow: hidden;
+    /* background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background: url(https://www.yaffanyc.com/wp-content/uploads/2023/02/brunch-menu-hero-image.jpg); */
+}
 
 .title {
     font-family: "Cormorant Garamond", serif;
@@ -111,6 +119,26 @@ body {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
+}
+
+.navbar-link {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-link:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Adjust this value to control the underline's position */
+    width: 0;
+    height: 2px;
+    /* background-color: #000;  */
+    transition: width 0.3s ease; /* Adjust the transition speed here */
+}
+
+.navbar-link:hover:after {
+    width: 100%;
 }
 
 .heroImage {
