@@ -6,21 +6,41 @@ import { FaLocationDot } from "react-icons/fa6";
 import Navbar from "./Navbar";
 
 interface HeaderProps {
-    image: string;
+    video?: string;
+    image?: string;
     title: string;
+    subtitle?: string;
     activeTab: string;
 }
 
-const Header: FC<HeaderProps> = ({ image, title, activeTab }) => {
+const Header: FC<HeaderProps> = ({
+    image,
+    title,
+    activeTab,
+    subtitle,
+    video,
+}) => {
     return (
         <div className="w-full h-[470px] md:h-[490px] lg:h-[590px] brunchMenu-page">
             {/* background image */}
-            <Image
-                src={image}
-                alt={`${title} image`}
-                fill
-                className="object-cover"
-            />
+            {image && (
+                <Image
+                    src={image}
+                    alt={`${title} image`}
+                    fill
+                    className="object-cover"
+                />
+            )}
+            {video && (
+                <video
+                    className="w-full h-full object-cover absolute top-0 left-0"
+                    autoPlay
+                    muted
+                    playsInline
+                    loop
+                    src={video}
+                ></video>
+            )}
             {/* header content */}
             <div className="absolute top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.45)] flex flex-col items-center">
                 {/* restaurant info */}
@@ -48,9 +68,11 @@ const Header: FC<HeaderProps> = ({ image, title, activeTab }) => {
 
                 {/* titles */}
                 <div className="flex-1 mb-20 w-full flex flex-col items-center justify-center gap-6 text-white hero-welcome">
-                    <h2 className="font-medium text-[14px] md:text-xl">
-                        FRANCE RATATOUILLE
-                    </h2>
+                    {subtitle && (
+                        <h2 className="font-medium text-[14px] md:text-xl">
+                            {subtitle}
+                        </h2>
+                    )}
                     <h1 className="text-[42px] md:text-[60px] lg:text-7xl font-semibold title">
                         {title}
                     </h1>

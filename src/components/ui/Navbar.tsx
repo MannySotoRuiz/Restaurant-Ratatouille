@@ -38,7 +38,9 @@ const Navbar = ({ activeTab }: { activeTab: string }) => {
                         MENU
                     </h3>
                     <svg
-                        className="w-4 h-4 ml-2"
+                        className={`w-4 h-4 ml-2 transition0-3s ${
+                            opendDropdownMenu ? "navbar-icon-rotate" : ""
+                        }`}
                         aria-hidden="true"
                         fill="none"
                         stroke="currentColor"
@@ -119,7 +121,7 @@ const Navbar = ({ activeTab }: { activeTab: string }) => {
                 >
                     CONTACT
                 </Link>
-                <button className="border-2 border-white px-[20px] py-[10px] cursor-pointer mb-2 hover:bg-white hover:text-black transition">
+                <button className="transition0-3s border-2 border-white px-[20px] py-[10px] cursor-pointer mb-2 hover:bg-white hover:text-black transition">
                     MAKE A RESERVATION
                 </button>
             </div>

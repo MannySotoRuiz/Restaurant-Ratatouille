@@ -214,6 +214,15 @@ body {
     width: 100%;
 }
 
+.transition0-3s {
+    transition: 0.3s;
+}
+
+.navbar-icon-rotate {
+    transform: rotate(-180deg);
+    transition-duration: 0.2s;
+}
+
 @media screen and (max-width: 767px) {
     .hero-welcome h2:before,
     .hero-welcome h2:after {

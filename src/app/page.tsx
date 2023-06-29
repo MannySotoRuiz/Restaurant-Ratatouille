@@ -58,7 +58,7 @@ export default function Home() {
                                     only the freshest and finest ingredients.{" "}
                                 </p>
 
-                                <button className="mt-10 md:mt-5 lg:mt-8 mb-12 sm:mb-10 xl:mb-16 px-[20px] py-[10px] w-32 inline-block bg-orange-600 text-white text-sm hover:-translate-y-[2px] transition-all">
+                                <button className="transition0-3s mt-10 md:mt-5 lg:mt-8 mb-12 sm:mb-10 xl:mb-16 px-[20px] py-[10px] w-32 inline-block bg-orange-600 text-white text-sm hover:-translate-y-[2px]">
                                     OUR MENU
                                 </button>
                             </div>
@@ -68,7 +68,7 @@ export default function Home() {
                                     src="https://source.unsplash.com/FQWtCUiE4GM"
                                     alt="food"
                                     fill={true}
-                                    className="rounded-xl object-cover shadow-lg shadow-black/50"
+                                    className="transition0-3s rounded-xl object-cover shadow-lg shadow-black/50"
                                 />
                             </div>
                         </div>
@@ -78,7 +78,7 @@ export default function Home() {
                                     src="https://source.unsplash.com/t7jTtJ9iyUE"
                                     alt="food"
                                     fill={true}
-                                    className="rounded-xl shadow-lg shadow-black/50"
+                                    className="transition0-3s rounded-xl shadow-lg shadow-black/50"
                                 />
                             </div>
                         </div>
@@ -190,10 +190,10 @@ export default function Home() {
                     </div>
                     {/* end of featured menu section */}
                     <div className="w-full flex justify-center items-center space-x-4">
-                        <button className="border-2 border-black px-[30px] py-[10px] font-medium text-[13px] hover:bg-black hover:text-white hover:-translate-y-[2px] transition-all">
+                        <button className="transition0-3s border-2 border-black px-[30px] py-[10px] font-medium text-[13px] hover:bg-black hover:text-white hover:-translate-y-[2px]">
                             BROWSE BRUNCH MENU
                         </button>
-                        <button className="border-2 border-black px-[30px] py-[10px] font-medium text-[13px] hover:bg-black hover:text-white hover:-translate-y-[2px] transition-all">
+                        <button className="transition0-3s border-2 border-black px-[30px] py-[10px] font-medium text-[13px] hover:bg-black hover:text-white hover:-translate-y-[2px]">
                             BROWSE MAIN MENU
                         </button>
                     </div>
