@@ -1,10 +1,9 @@
 "use client";
 
 import { Mail } from "lucide-react";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
-import { HiOutlineMail } from "react-icons/hi";
+import Navbar from "@/components/ui/Navbar";
 
 const Hero = () => {
     const images = [
@@ -13,7 +12,8 @@ const Hero = () => {
         "/images/hero_image3.jpg",
         "/images/hero_image4.jpg",
     ];
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState<number>(0);
+    // const [opendDropdownMenu, setOpenDropdownMenu] = useState<boolean>(false);
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -60,57 +60,7 @@ const Hero = () => {
                     </div>
                 </div>
 
-                {/* nav bar */}
-                <div className="w-full 2xl:w-[1400px] flex items-center justify-between px-[10%] lg:px-[6%] 2xl:px-[40px] text-white text-[14px] py-[50px]">
-                    <div>Logo</div>
-                    <div className="hidden lg:flex items-center space-x-8">
-                        <h2 className="border-b-2 border-orange-500 pb-1 cursor-pointer">
-                            HOME
-                        </h2>
-                        <div>
-                            <Link
-                                href="brunch-menu"
-                                className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                            >
-                                MENU
-                            </Link>
-                        </div>
-                        <Link
-                            href="brunch-menu"
-                            className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                        >
-                            ABOUT
-                        </Link>
-                        <Link
-                            href="brunch-menu"
-                            className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                        >
-                            GALLERY
-                        </Link>
-                        <Link
-                            href="brunch-menu"
-                            className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                        >
-                            EVENTS
-                        </Link>
-                        <Link
-                            href="brunch-menu"
-                            className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                        >
-                            BLOG
-                        </Link>
-                        <Link
-                            href="brunch-menu"
-                            className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                        >
-                            CONTACT
-                        </Link>
-                        <button className="border-2 border-white px-[20px] py-[10px] cursor-pointer mb-2 hover:bg-white hover:text-black transition">
-                            MAKE A RESERVATION
-                        </button>
-                    </div>
-                </div>
-                {/* end of nav bar */}
+                <Navbar activeTab="home" />
 
                 {/* welcome message */}
                 <div className="absolute top-[45%] w-full flex flex-col gap-6 items-center justify-center text-white hero-welcome">

@@ -71,10 +71,21 @@ module.exports = {
                     from: { height: "var(--radix-accordion-content-height)" },
                     to: { height: 0 },
                 },
+                fadeSlideUp: {
+                    from: {
+                        opacity: "0",
+                        transform: "translateY(50px)",
+                    },
+                    to: {
+                        opacity: "1",
+                        transform: "translateY(0px)",
+                    },
+                },
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
+                slideUp: "fadeSlideUp 0.3s ease-out",
             },
             height: {
                 "10vh": "10vh",

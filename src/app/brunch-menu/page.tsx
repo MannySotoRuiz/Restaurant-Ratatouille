@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaLocationDot } from "react-icons/fa6";
 import { brunchMenu } from "@/utils/menu";
+import Navbar from "@/components/ui/Navbar";
 
 const page = () => {
     return (
@@ -39,63 +40,7 @@ const page = () => {
                     </div>
                     {/* end of restaurant info */}
 
-                    {/* navbar */}
-                    <div className="w-full 2xl:w-[1400px] flex items-center justify-between px-[10%] lg:px-[6%] 2xl:px-[40px] text-white text-[14px] py-[50px]">
-                        <div>Logo</div>
-                        <div className="hidden lg:flex items-center space-x-8">
-                            {/* <h2 className="border-b-2 border-orange-500 pb-1 cursor-pointer">
-                                HOME
-                            </h2> */}
-                            <Link
-                                href="/"
-                                className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                            >
-                                HOME
-                            </Link>
-                            <div>
-                                <Link
-                                    href="brunch-menu"
-                                    className="border-b-2 border-orange-500 pb-1"
-                                >
-                                    MENU
-                                </Link>
-                            </div>
-                            <Link
-                                href="brunch-menu"
-                                className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                            >
-                                ABOUT
-                            </Link>
-                            <Link
-                                href="brunch-menu"
-                                className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                            >
-                                GALLERY
-                            </Link>
-                            <Link
-                                href="brunch-menu"
-                                className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                            >
-                                EVENTS
-                            </Link>
-                            <Link
-                                href="brunch-menu"
-                                className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                            >
-                                BLOG
-                            </Link>
-                            <Link
-                                href="brunch-menu"
-                                className="pb-2 cursor-pointer navbar-link after:bg-orange-500"
-                            >
-                                CONTACT
-                            </Link>
-                            <button className="border-2 border-white px-[20px] py-[10px] cursor-pointer mb-2 hover:bg-white hover:text-black transition">
-                                MAKE A RESERVATION
-                            </button>
-                        </div>
-                    </div>
-                    {/* end of navbar */}
+                    <Navbar activeTab="menu" />
 
                     {/* titles */}
                     <div className="flex-1 mb-20 w-full flex flex-col items-center justify-center gap-6 text-white hero-welcome">
