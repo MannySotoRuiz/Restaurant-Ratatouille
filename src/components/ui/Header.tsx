@@ -8,9 +8,10 @@ import Navbar from "./Navbar";
 interface HeaderProps {
     image: string;
     title: string;
+    activeTab: string;
 }
 
-const Header: FC<HeaderProps> = ({ image, title }) => {
+const Header: FC<HeaderProps> = ({ image, title, activeTab }) => {
     return (
         <div className="w-full h-[470px] md:h-[490px] lg:h-[590px] brunchMenu-page">
             {/* background image */}
@@ -43,7 +44,7 @@ const Header: FC<HeaderProps> = ({ image, title }) => {
                 </div>
                 {/* end of restaurant info */}
 
-                <Navbar activeTab="menu" />
+                <Navbar activeTab={activeTab} />
 
                 {/* titles */}
                 <div className="flex-1 mb-20 w-full flex flex-col items-center justify-center gap-6 text-white hero-welcome">

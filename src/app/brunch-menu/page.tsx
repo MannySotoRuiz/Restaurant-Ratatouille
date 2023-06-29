@@ -12,6 +12,7 @@ const page = () => {
             <Header
                 image="https://www.yaffanyc.com/wp-content/uploads/2023/02/brunch-menu-hero-image.jpg"
                 title="Brunch Menu"
+                activeTab="menu"
             />
 
             {/* body content */}
