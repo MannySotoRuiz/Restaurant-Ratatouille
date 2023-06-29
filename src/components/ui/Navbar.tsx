@@ -18,7 +18,7 @@ const Navbar = ({ activeTab }: { activeTab: string }) => {
                     className={`${
                         activeTab === "home"
                             ? "border-b-2 border-orange-600 pb-1"
-                            : "pb-2 navbar-link after:bg-orange-600"
+                            : "pb-1 navbar-link after:bg-orange-600"
                     }`}
                 >
                     HOME

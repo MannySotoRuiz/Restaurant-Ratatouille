@@ -74,7 +74,7 @@ module.exports = {
                 fadeSlideUp: {
                     from: {
                         opacity: "0",
-                        transform: "translateY(50px)",
+                        transform: "translateY(20px)",
                     },
                     to: {
                         opacity: "1",
@@ -85,7 +85,7 @@ module.exports = {
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
-                slideUp: "fadeSlideUp 0.3s ease-out",
+                slideUp: "fadeSlideUp 0.2s ease-out",
             },
             height: {
                 "10vh": "10vh",
