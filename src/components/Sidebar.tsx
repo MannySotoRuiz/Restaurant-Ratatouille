@@ -20,7 +20,6 @@ const Sidebar = ({ activeTab }: { activeTab: string }) => {
             document.documentElement.style.overflow = "hidden"; // disable background scrolling when menu is opened
         }
     };
-    console.log(activeTab);
     return (
         <>
             <RxHamburgerMenu

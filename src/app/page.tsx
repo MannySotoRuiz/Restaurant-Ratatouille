@@ -9,6 +9,8 @@ import {
     recommendationMenu3,
 } from "@/utils/data";
 import BookATable from "@/components/BookATable";
+import Link from "next/link";
+import Recommendations from "@/components/Recommendations";
 
 export default function Home() {
     return (
@@ -58,9 +60,11 @@ export default function Home() {
                                     only the freshest and finest ingredients.{" "}
                                 </p>
 
-                                <button className="transition0-3s mt-10 md:mt-5 lg:mt-8 mb-12 sm:mb-10 xl:mb-16 px-[20px] py-[10px] w-32 inline-block bg-orange-600 text-white text-sm hover:-translate-y-[2px]">
-                                    OUR MENU
-                                </button>
+                                <Link href="menu">
+                                    <button className="transition0-3s mt-10 md:mt-5 lg:mt-8 mb-12 sm:mb-10 xl:mb-16 px-[20px] py-[10px] w-32 inline-block bg-orange-600 text-white text-sm hover:-translate-y-[2px]">
+                                        OUR MENU
+                                    </button>
+                                </Link>
                             </div>
 
                             <div className="w-full md:w-full h-[220px] lg:h-[350px] xl:h-[400px] relative">
@@ -190,104 +194,23 @@ export default function Home() {
                     </div>
                     {/* end of featured menu section */}
                     <div className="w-full flex justify-center items-center space-x-4">
-                        <button className="transition0-3s border-2 border-black px-[30px] py-[10px] font-medium text-[13px] hover:bg-black hover:text-white hover:-translate-y-[2px]">
-                            BROWSE BRUNCH MENU
-                        </button>
-                        <button className="transition0-3s border-2 border-black px-[30px] py-[10px] font-medium text-[13px] hover:bg-black hover:text-white hover:-translate-y-[2px]">
-                            BROWSE MAIN MENU
-                        </button>
+                        <Link href="brunch-menu">
+                            <button className="transition0-3s border-2 border-black px-[30px] py-[10px] font-medium text-[13px] hover:bg-black hover:text-white hover:-translate-y-[2px]">
+                                BROWSE BRUNCH MENU
+                            </button>
+                        </Link>
+                        <Link href="menu">
+                            <button className="transition0-3s border-2 border-black px-[30px] py-[10px] font-medium text-[13px] hover:bg-black hover:text-white hover:-translate-y-[2px]">
+                                BROWSE MAIN MENU
+                            </button>
+                        </Link>
                     </div>
                 </div>
                 {/* end of main body section */}
             </div>
 
-            {/* recommendations */}
-            <section className="w-full flex flex-col sm:flex-row">
-                <div className="w-full sm:w-2/5 h-40vh sm:h-60vh lg:h-70vh xl:h-[833px] relative recommendation-menu">
-                    <Image
-                        src={recommendationMenu1.image}
-                        alt={recommendationMenu1.title}
-                        fill={true}
-                        className="object-cover"
-                    />
-                    {/* info */}
-                    <div className="bg-[rgba(0,0,0,0.3)] w-full h-full text-white z-10 absolute flex flex-col-reverse space-y-1 p-8">
-                        {/* menu link */}
-                        <a
-                            className="text-[13px] font-medium mt-2"
-                            href={recommendationMenu1.menuLink}
-                        >
-                            <span className="border-b-2 border-orange-500 pb-1">
-                                {recommendationMenu1.menuName}
-                            </span>
-                        </a>
-                        {/* title */}
-                        <h2 className="title text-[30px] lg:text-[40px] xl:text-[50px] font-light">
-                            {recommendationMenu1.title}
-                        </h2>
-                        {/* description */}
-                        <p className="text-[20px] font-medium">
-                            {recommendationMenu1.description}
-                        </p>
-                    </div>
-                </div>
-                <div className="w-full sm:w-2/5 h-40vh sm:h-60vh lg:h-70vh xl:h-[833px] relative recommendation-menu">
-                    <Image
-                        src={recommendationMenu2.image}
-                        alt={recommendationMenu2.title}
-                        fill={true}
-                        className="object-cover"
-                    />
-                    {/* info */}
-                    <div className="bg-[rgba(0,0,0,0.35)] w-full h-full text-white z-10 absolute flex flex-col-reverse space-y-2 p-8">
-                        {/* menu link */}
-                        <a
-                            className="text-[13px] font-medium mt-2"
-                            href={recommendationMenu2.menuLink}
-                        >
-                            <span className="border-b-2 border-orange-500 pb-1">
-                                {recommendationMenu2.menuName}
-                            </span>
-                        </a>
-                        {/* title */}
-                        <h2 className="title text-[30px] lg:text-[40px] xl:text-[50px] font-light">
-                            {recommendationMenu2.title}
-                        </h2>
-                        {/* description */}
-                        <p className="text-[20px] font-medium">
-                            {recommendationMenu2.description}
-                        </p>
-                    </div>
-                </div>
-                <div className="w-full sm:w-1/5 h-40vh sm:h-60vh lg:h-70vh xl:h-[833px] relative recommendation-menu">
-                    <Image
-                        src={recommendationMenu3.image}
-                        alt={recommendationMenu3.title}
-                        fill={true}
-                        className="object-cover"
-                    />
-                    {/* info */}
-                    <div className="bg-[rgba(0,0,0,0.35)] w-full h-full text-white z-10 absolute flex flex-col-reverse items-end space-y-2 py-8 pr-6">
-                        {/* menu link */}
-                        <a
-                            className="text-[13px] font-medium mt-2"
-                            href={recommendationMenu3.menuLink}
-                        >
-                            <span className="border-b-2 border-orange-500 pb-1">
-                                {recommendationMenu3.menuName}
-                            </span>
-                        </a>
-                        {/* title */}
-                        <h2 className="title text-[30px] lg:text-[40px] xl:text-[50px] font-light text-right">
-                            {recommendationMenu3.title}
-                        </h2>
-                        {/* description */}
-                        <p className="text-[20px] font-medium">
-                            {recommendationMenu3.description}
-                        </p>
-                    </div>
-                </div>
-            </section>
+            <Recommendations />
+
             {/* our philosophy */}
             <section className="w-full flex items-center justify-center flex-col py-16 sm:py-20 px-[6%] sm:px-[8%] xl:px-0">
                 <div className="w-full xl:border-none xl:w-[1200px] xl:px-10 grid grid-cols-1 xl:grid-cols-2 space-y-7 xl:space-y-0">
