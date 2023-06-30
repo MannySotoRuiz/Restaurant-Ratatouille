@@ -39,7 +39,7 @@ const Hero = () => {
             ))}
 
             {/* hero content */}
-            <div className="w-screen h-screen absolute z-50 bg-[rgba(0,0,0,0.45)] flex flex-col items-center">
+            <div className="w-screen h-80vh md:h-screen absolute z-50 bg-[rgba(0,0,0,0.45)] flex flex-col items-center">
                 {/* restuarant info */}
                 <div className="hidden lg:flex w-full border-b border-gray-500 items-center justify-center text-white text-[13px] py-[15px]">
                     <div className="w-full 2xl:w-[1400px] flex items-center justify-between px-[4%] sm:px-[6%] 2xl:px-[40px]">

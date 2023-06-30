@@ -241,6 +241,12 @@ body {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .heroSection {
+        height: 80vh;
+    }
+}
+
 /* For 2K & 4K resolutions */
 /* @media screen and (min-width: 2048px) {
     body {
