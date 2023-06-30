@@ -61,7 +61,7 @@ const Footer = () => {
                     </div>
                     <div className="flex items-center text-[15px] space-x-3">
                         <FaPhoneFlip />
-                        <span>1234 Avenue, New York, NY 01234</span>
+                        <span>(123) 456 7890</span>
                     </div>
                     <div className="flex items-center text-[15px] space-x-3">
                         <HiOutlineMail size={18} />
@@ -75,7 +75,7 @@ const Footer = () => {
                     <Link
                         href="https://mannysotoruiz.com/"
                         target="_blank"
-                        className="transition-all hover:text-orange-600"
+                        className="transition0-3s hover:text-orange-600"
                     >
                         Emmanuel Soto Ruiz
                     </Link>

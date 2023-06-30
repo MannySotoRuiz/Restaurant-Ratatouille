@@ -223,6 +223,11 @@ body {
     transition-duration: 0.2s;
 }
 
+.navbar-icon-rotate90 {
+    transform: rotate(90deg);
+    transition-duration: 0.2s;
+}
+
 @media screen and (max-width: 767px) {
     .hero-welcome h2:before,
     .hero-welcome h2:after {

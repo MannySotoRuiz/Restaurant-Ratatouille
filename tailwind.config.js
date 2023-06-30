@@ -81,11 +81,22 @@ module.exports = {
                         transform: "translateY(0px)",
                     },
                 },
+                slideLeftToRight: {
+                    from: {
+                        opacity: "0",
+                        transform: "translateX(400px)",
+                    },
+                    to: {
+                        opacity: "1",
+                        transform: "translateX(0px)",
+                    },
+                },
             },
             animation: {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
                 slideUp: "fadeSlideUp 0.2s ease-out",
+                slideLeftToRight: "slideLeftToRight 0.3s ease",
             },
             height: {
                 "10vh": "10vh",

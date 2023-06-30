@@ -13,7 +13,7 @@ const Hero = () => {
         "/images/hero_image4.jpg",
     ];
     const [currentIndex, setCurrentIndex] = useState<number>(0);
-    // const [opendDropdownMenu, setOpenDropdownMenu] = useState<boolean>(false);
+
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
