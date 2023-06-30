@@ -1,16 +1,11 @@
 import Hero from "@/components/Hero";
 import Image from "next/image";
-import {
-    saladMenu,
-    meatMenu,
-    sandwichesMenu,
-    recommendationMenu1,
-    recommendationMenu2,
-    recommendationMenu3,
-} from "@/utils/data";
+import { saladMenu, meatMenu, sandwichesMenu } from "@/utils/data";
 import BookATable from "@/components/BookATable";
 import Link from "next/link";
 import Recommendations from "@/components/Recommendations";
+import FadeImageAnimation from "@/components/ui/FadeImageAnimation";
+import FadeTextAnimation from "@/components/ui/FadeTextAnimation";
 
 export default function Home() {
     return (
@@ -68,22 +63,30 @@ export default function Home() {
                             </div>
 
                             <div className="w-full md:w-full h-[220px] lg:h-[350px] xl:h-[400px] relative">
-                                <Image
-                                    src="https://source.unsplash.com/FQWtCUiE4GM"
-                                    alt="food"
-                                    fill={true}
-                                    className="transition0-3s rounded-xl object-cover shadow-lg shadow-black/50"
-                                />
+                                <FadeImageAnimation
+                                    delay={500}
+                                    duration={2000}
+                                >
+                                    <Image
+                                        src="https://source.unsplash.com/FQWtCUiE4GM"
+                                        alt="food"
+                                        fill={true}
+                                        className="transition0-3s rounded-xl object-cover shadow-lg shadow-black/50"
+                                    />
+                                </FadeImageAnimation>
                             </div>
                         </div>
+                        {/* <Reveal width="100%"> */}
                         <div className="hidden md:flex w-full h-full flex-col-reverse">
                             <div className="w-full md:h-[420px] lg:h-[80%] xl:h-full relative">
-                                <Image
-                                    src="https://source.unsplash.com/t7jTtJ9iyUE"
-                                    alt="food"
-                                    fill={true}
-                                    className="transition0-3s rounded-xl shadow-lg shadow-black/50"
-                                />
+                                <FadeImageAnimation duration={2000}>
+                                    <Image
+                                        src="https://source.unsplash.com/t7jTtJ9iyUE"
+                                        alt="food"
+                                        fill={true}
+                                        className="transition0-3s rounded-xl shadow-lg shadow-black/50"
+                                    />
+                                </FadeImageAnimation>
                             </div>
                         </div>
                     </div>
@@ -92,105 +95,123 @@ export default function Home() {
                     {/* featured menus section */}
                     <div className="pt-20 md:pt-28 pb-[30px] w-full grid grid-cols-1 xl:grid-cols-3 gap-8">
                         {/* salads menu */}
-                        <div className="w-full flex flex-col items-center">
-                            {/* menu subtitle */}
-                            <h4 className="text-orange-600 text-[13px] font-semibold">
-                                REFRESHING HEALTHY OPTIONS
-                            </h4>
-                            {/* menu title */}
-                            <h2 className="title text-[35px] mt-1 mb-4">
-                                SALADS
-                            </h2>
+                        <FadeTextAnimation
+                            direction="up"
+                            duration={1000}
+                            delay={250}
+                        >
+                            <div className="w-full flex flex-col items-center">
+                                {/* menu subtitle */}
+                                <h4 className="text-orange-600 text-[13px] font-semibold">
+                                    REFRESHING HEALTHY OPTIONS
+                                </h4>
+                                {/* menu title */}
+                                <h2 className="title text-[35px] mt-1 mb-4">
+                                    SALADS
+                                </h2>
 
-                            {/* menu items */}
-                            {saladMenu.map((item, idx) => (
-                                <div
-                                    className="w-full mb-6"
-                                    key={idx}
-                                >
-                                    {/* menu item title and price*/}
-                                    <div className="flex items-center w-full mb-1">
-                                        <h6 className="title text-[24px]">
-                                            {item.title}
-                                        </h6>
-                                        <span className="flex-1 text-center border-b leading-[0.1em] mt-[15px] mb-[15px] mx-[10px]"></span>
-                                        <h3 className="text-[20px]">
-                                            {item.price}
-                                        </h3>
+                                {/* menu items */}
+                                {saladMenu.map((item, idx) => (
+                                    <div
+                                        className="w-full mb-6"
+                                        key={idx}
+                                    >
+                                        {/* menu item title and price*/}
+                                        <div className="flex items-center w-full mb-1">
+                                            <h6 className="title text-[24px]">
+                                                {item.title}
+                                            </h6>
+                                            <span className="flex-1 text-center border-b leading-[0.1em] mt-[15px] mb-[15px] mx-[10px]"></span>
+                                            <h3 className="text-[20px]">
+                                                {item.price}
+                                            </h3>
+                                        </div>
+                                        {/* menu item description */}
+                                        <p className="text-gray-400 text-[16px]">
+                                            {item.description}
+                                        </p>
                                     </div>
-                                    {/* menu item description */}
-                                    <p className="text-gray-400 text-[16px]">
-                                        {item.description}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
+                                ))}
+                            </div>
+                        </FadeTextAnimation>
 
                         {/* Main Meat Menu */}
-                        <div className="w-full flex flex-col items-center">
-                            {/* menu subtitle */}
-                            <h4 className="text-orange-600 text-[13px] font-semibold">
-                                TOP RATED DISHES
-                            </h4>
-                            {/* menu title */}
-                            <h2 className="title text-[35px] mt-1 mb-4">
-                                MEAT MAIN
-                            </h2>
+                        <FadeTextAnimation
+                            direction="up"
+                            duration={1000}
+                            delay={500}
+                        >
+                            <div className="w-full flex flex-col items-center">
+                                {/* menu subtitle */}
+                                <h4 className="text-orange-600 text-[13px] font-semibold">
+                                    TOP RATED DISHES
+                                </h4>
+                                {/* menu title */}
+                                <h2 className="title text-[35px] mt-1 mb-4">
+                                    MEAT MAIN
+                                </h2>
 
-                            {/* menu items */}
-                            {meatMenu.map((item, idx) => (
-                                <div
-                                    className="w-full mb-6"
-                                    key={idx}
-                                >
-                                    {/* menu item title and price*/}
-                                    <div className="flex items-center w-full mb-1">
-                                        <h6 className="title text-[24px]">
-                                            {item.title}
-                                        </h6>
-                                        <span className="flex-1 text-center border-b leading-[0.1em] mt-[15px] mb-[15px] mx-[10px]"></span>
-                                        <h3 className="text-[20px]">
-                                            {item.price}
-                                        </h3>
+                                {/* menu items */}
+                                {meatMenu.map((item, idx) => (
+                                    <div
+                                        className="w-full mb-6"
+                                        key={idx}
+                                    >
+                                        {/* menu item title and price*/}
+                                        <div className="flex items-center w-full mb-1">
+                                            <h6 className="title text-[24px]">
+                                                {item.title}
+                                            </h6>
+                                            <span className="flex-1 text-center border-b leading-[0.1em] mt-[15px] mb-[15px] mx-[10px]"></span>
+                                            <h3 className="text-[20px]">
+                                                {item.price}
+                                            </h3>
+                                        </div>
                                     </div>
-                                </div>
-                            ))}
-                        </div>
+                                ))}
+                            </div>
+                        </FadeTextAnimation>
 
                         {/* sandwhiches */}
-                        <div className="w-full flex flex-col items-center">
-                            {/* menu subtitle */}
-                            <h4 className="text-orange-600 text-[13px] font-semibold">
-                                FINGER FOODS
-                            </h4>
-                            {/* menu title */}
-                            <h2 className="title text-[35px] mt-1 mb-4">
-                                SANDWICHES
-                            </h2>
+                        <FadeTextAnimation
+                            direction="up"
+                            duration={1000}
+                            delay={1000}
+                        >
+                            <div className="w-full flex flex-col items-center">
+                                {/* menu subtitle */}
+                                <h4 className="text-orange-600 text-[13px] font-semibold">
+                                    FINGER FOODS
+                                </h4>
+                                {/* menu title */}
+                                <h2 className="title text-[35px] mt-1 mb-4">
+                                    SANDWICHES
+                                </h2>
 
-                            {/* menu items */}
-                            {sandwichesMenu.map((item, idx) => (
-                                <div
-                                    className="w-full mb-6"
-                                    key={idx}
-                                >
-                                    {/* menu item title and price*/}
-                                    <div className="flex items-center w-full mb-1">
-                                        <h6 className="title text-[24px]">
-                                            {item.title}
-                                        </h6>
-                                        <span className="flex-1 text-center border-b leading-[0.1em] mt-[15px] mb-[15px] mx-[10px]"></span>
-                                        <h3 className="text-[20px]">
-                                            {item.price}
-                                        </h3>
+                                {/* menu items */}
+                                {sandwichesMenu.map((item, idx) => (
+                                    <div
+                                        className="w-full mb-6"
+                                        key={idx}
+                                    >
+                                        {/* menu item title and price*/}
+                                        <div className="flex items-center w-full mb-1">
+                                            <h6 className="title text-[24px]">
+                                                {item.title}
+                                            </h6>
+                                            <span className="flex-1 text-center border-b leading-[0.1em] mt-[15px] mb-[15px] mx-[10px]"></span>
+                                            <h3 className="text-[20px]">
+                                                {item.price}
+                                            </h3>
+                                        </div>
+                                        {/* menu item description */}
+                                        <p className="text-gray-400 text-[16px]">
+                                            {item.description}
+                                        </p>
                                     </div>
-                                    {/* menu item description */}
-                                    <p className="text-gray-400 text-[16px]">
-                                        {item.description}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
+                                ))}
+                            </div>
+                        </FadeTextAnimation>
                     </div>
                     {/* end of featured menu section */}
                     <div className="w-full flex justify-center items-center space-x-4">
@@ -217,20 +238,27 @@ export default function Home() {
                     {/* left side */}
                     <div className="w-full h-50vh xl:h-full relative">
                         <div className="w-[70%] h-[60%] sm:w-1/2 sm:h-[80%] absolute bottom-0 left-0">
-                            <Image
-                                src="https://source.unsplash.com/W7yjuNoAe74"
-                                alt="chef"
-                                fill={true}
-                                className="rounded-xl object-cover shadow-lg shadow-black/50"
-                            />
+                            <FadeImageAnimation duration={1500}>
+                                <Image
+                                    src="https://source.unsplash.com/W7yjuNoAe74"
+                                    alt="chef"
+                                    fill={true}
+                                    className="rounded-xl object-cover shadow-lg shadow-black/50"
+                                />
+                            </FadeImageAnimation>
                         </div>
                         <div className="w-[70%] h-[60%] sm:w-8/12 sm:h-[90%] absolute top-0 right-0 z-20">
-                            <Image
-                                src="https://source.unsplash.com/eBmyH7oO5wY"
-                                alt="chef"
-                                fill={true}
-                                className="rounded-xl object-cover shadow-lg shadow-black/50"
-                            />
+                            <FadeImageAnimation
+                                duration={1500}
+                                delay={250}
+                            >
+                                <Image
+                                    src="https://source.unsplash.com/eBmyH7oO5wY"
+                                    alt="chef"
+                                    fill={true}
+                                    className="rounded-xl object-cover shadow-lg shadow-black/50"
+                                />
+                            </FadeImageAnimation>
                         </div>
                     </div>
                     {/* right side */}
