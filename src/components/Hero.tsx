@@ -4,7 +4,7 @@ import { Mail } from "lucide-react";
 import { useEffect, useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import Navbar from "@/components/ui/Navbar";
-import Reveal from "./ui/Reveal";
+import FadeTextAnimation from "@/components/ui/FadeTextAnimation";
 
 const Hero = () => {
     const images = [
@@ -21,7 +21,7 @@ const Hero = () => {
         }, 5000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [images.length]);
 
     return (
         <div
@@ -65,14 +65,18 @@ const Hero = () => {
 
                 {/* welcome message */}
                 <div className="absolute top-[45%] w-full flex flex-col gap-6 items-center justify-center text-white hero-welcome">
-                    <h2 className="font-medium text-[14px] md:text-xl">
-                        WELCOME TO FRANCE
-                    </h2>
-                    <Reveal>
+                    <FadeTextAnimation
+                        direction="up"
+                        duration={500}
+                        cascade={true}
+                    >
+                        <h2 className="font-medium text-[14px] md:text-xl">
+                            WELCOME TO FRANCE
+                        </h2>
                         <h1 className="text-[42px] md:text-[60px] lg:text-7xl font-semibold title">
                             RATATOUILLE
                         </h1>
-                    </Reveal>
+                    </FadeTextAnimation>
                 </div>
             </div>
         </div>

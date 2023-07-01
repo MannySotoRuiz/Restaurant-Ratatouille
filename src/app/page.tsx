@@ -76,7 +76,6 @@ export default function Home() {
                                 </FadeImageAnimation>
                             </div>
                         </div>
-                        {/* <Reveal width="100%"> */}
                         <div className="hidden md:flex w-full h-full flex-col-reverse">
                             <div className="w-full md:h-[420px] lg:h-[80%] xl:h-full relative">
                                 <FadeImageAnimation duration={2000}>

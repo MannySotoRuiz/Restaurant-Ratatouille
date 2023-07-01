@@ -8,6 +8,7 @@ interface FadeTextAnimationProps {
     children: React.ReactNode;
     duration?: 1000 | number;
     delay?: 0 | number;
+    cascade?: boolean;
 }
 
 const FadeTextAnimation: FC<FadeTextAnimationProps> = ({
@@ -15,9 +16,11 @@ const FadeTextAnimation: FC<FadeTextAnimationProps> = ({
     duration = 1000,
     delay = 0,
     direction,
+    cascade = false,
 }) => {
     return (
         <Fade
+            cascade={cascade}
             direction={direction}
             duration={duration}
             triggerOnce
